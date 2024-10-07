@@ -51,7 +51,7 @@
     - `{go-project}` *main 包，此目录应与项目名称相同*
       - `main.go` *main 函数所在的文件*
   - `internal` *用于存放源代码文件*
-  - `~~pkg~~` *不要使用 pkg 目录，因为在Go项目标准布局[^1]中 /pkg 用于存放外部应用程序可以使用的库代码，如果项目被外部引用，那它应为一个独立的 Go module，而不仅是作为项目的一个包*
+  - ~~`pkg`~~ *不要使用 pkg 目录，因为在Go项目标准布局[^1]中 /pkg 用于存放外部应用程序可以使用的库代码，如果项目被外部引用，那它应为一个独立的 Go module，而不仅是作为项目的一个包*
   - `vendor` *存储在本地的外部依赖，按需使用 go vendor 功能*
   - `meson.build` *如果需要，可以提供构建脚本文件*
   - `go.mod` *go 模块文件，格式 {project-url}/{go-project}*
@@ -92,8 +92,8 @@
 - `docker-compose` *存放 Docker compose 文件*
 - `Cargo.toml` *如果此项目包含了 Rust 代码，应当在根目录提供 `Cargo.toml`，声明其是一个 Rust packege。*
 - `Cargo.lock`
-- `~~go.mod~~` *不要在根目录提供 Golang 模块声明，因为 Golang 的相关工具在处理这种项目时可能会出现问题*
-- `~~go.sum~~`  *因为没有 go.mod 文件，所以也不需要 go.sum*
+- ~~`go.mod`~~ *不要在根目录提供 Golang 模块声明，因为 Golang 的相关工具在处理这种项目时可能会出现问题*
+- ~~`go.sum`~~  *因为没有 go.mod 文件，所以也不需要 go.sum*
 - `go.work` *如果需要，可以使用 go.work 管理各个 go 模块*
 - `meson.build` *构建脚本文件*
 
